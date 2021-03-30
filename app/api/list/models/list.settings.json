@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lists",
+  "info": {
+    "name": "List",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "createdBy": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "lists"
+    },
+    "guest": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "lists",
+      "dominant": true
+    },
+    "product_list": {
+      "via": "list",
+      "model": "product-list"
+    }
+  }
+}

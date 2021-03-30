@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shelves",
+  "info": {
+    "name": "Shelf"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "products": {
+      "via": "shelf",
+      "collection": "product"
+    }
+  }
+}

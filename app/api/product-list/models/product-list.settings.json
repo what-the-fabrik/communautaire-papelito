@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_lists",
+  "info": {
+    "name": "Product_list"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "product": {
+      "model": "product",
+      "via": "product_list"
+    },
+    "createdBy": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "product_list"
+    },
+    "updatedBy": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "product_list"
+    },
+    "list": {
+      "model": "list",
+      "via": "product_list"
+    },
+    "isCheck": {
+      "type": "boolean"
+    }
+  }
+}

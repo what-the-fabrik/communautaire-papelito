@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "Product"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "commentary": {
+      "type": "richtext"
+    },
+    "brand": {
+      "model": "brand",
+      "via": "products"
+    },
+    "shelf": {
+      "model": "shelf",
+      "via": "products"
+    },
+    "product_list": {
+      "via": "product",
+      "model": "product-list"
+    }
+  }
+}
